@@ -58,7 +58,7 @@ server <- function(input, output, session) {
   observeEvent(input$shift_1, {
     shifts2 <- rbind(shifts, as.character(input$date_1))
     converted_data <- shifts2$Date
-    write_csv(shifts2, file = paste0("/Users/danielmulder/Library/CloudStorage//OneDrive-KingstonHealthSciencesCentre//Clinical/Other/on_call_shifts.csv"))
+    write_csv(shifts2, file = paste0("/Clinical/Other/on_call_shifts.csv"))
     })
   
   output$on_call_table <- renderTable(shifts_char)
